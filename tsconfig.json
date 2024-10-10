@@ -1,0 +1,12 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "lib": ["ES2015", "DOM"],
+  "compilerOptions": {
+    "module": "ES2020"
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "playground",
+  ]
+}
