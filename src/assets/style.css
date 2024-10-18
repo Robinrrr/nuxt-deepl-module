@@ -1,0 +1,181 @@
+.dl-dropdown {
+  position: relative;
+  display: inline-block;
+
+  --dl-color-white: #ffffff;
+  --dl-color-primary-light: #c6e5f1;
+  --dl-color-primary: #0177a9;
+  --dl-color-primary-dark: #0c5b8f;
+  --dl-color-neutral-light: #f7fafc;
+  --dl-color-neutral: #e2e8f0;
+  --dl-color-neutral-dark: #4a5568;
+
+  --dl-color-button-surface: var(--dl-color-white);
+  --dl-color-button-border: var(--dl-color-neutral);
+  --dl-color-button-text: var(--dl-color-neutral-dark);
+  --dl-color-menu-surface: var(--dl-color-white);
+  --dl-color-menu-border: var(--dl-color-neutral);
+  --dl-color-menu-button-text: var(--dl-color-primary);
+  --dl-color-menu-button-surface: transparent;
+  --dl-color-menu-button-surface--hover: var(--dl-color-primary-light);
+  --dl-color-menu-button-text--hover: var(--dl-color-primary);
+  --dl-color-menu-button-surface--active: var(--dl-color-primary);
+  --dl-color-menu-button-text--active: var(--dl-color-white);
+  --dl-color-border: var(--dl-color-neutral);
+  --dl-color-icon: var(--dl-color-primary);
+  --dl-shadow-button: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --dl-shadow-menu: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dl-dropdown__button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  width: 12rem;
+  max-width: 100%;
+  border: 1px solid var(--dl-color-button-border);
+  border-radius: 0.25rem;
+  background-color: var(--dl-color-button-surface);
+  color: var(--dl-color-button-text);
+  cursor: pointer;
+  box-shadow: var(--dl-shadow-button);
+}
+
+.dl-dropdown__button > *:last-child {
+  margin-left: auto;
+}
+
+.dl-dropdown__button.is-active .dl-dropdown__button-icon--suffix {
+  transform: rotate(180deg);
+}
+
+.dl-dropdown__button-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  color: var(--dl-color-icon);
+
+  transition: transform 0.2s;
+}
+
+.dl-dropdown__button-icon-wrapper {
+  display: block;
+  position: relative;
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.dl-dropdown__menu {
+  position: absolute;
+  z-index: 10;
+  min-width: 100%;
+  width: 280px;
+  max-height: 280px;
+  overflow: auto;
+  margin: 0.5rem 0;
+  background-color: var(--dl-color-menu-surface);
+  border: 1px solid var(--dl-color-menu-border);
+  border-radius: 0.25rem;
+  box-shadow: var(--dl-shadow-menu);
+}
+
+.dl-dropdown__menu.is-bottom {
+  top: 100%;
+}
+
+.dl-dropdown__menu.is-top {
+  bottom: 100%;
+}
+
+.dl-dropdown__menu.is-right {
+  left: 0;
+}
+
+.dl-dropdown__menu.is-left {
+  right: 0;
+}
+
+.dl-dropdown__menu-list {
+  list-style: none;
+  padding: 0.25rem;
+  margin: 0;
+}
+
+.dl-dropdown__menu-list-item {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dl-dropdown__menu-list-item + .dl-dropdown__menu-list-item {
+  margin-top: 0.25rem;
+}
+
+.dl-dropdown__menu-list-button {
+  background-color: var(--dl-color-menu-button-surface);
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: var(--dl-color-menu-button-text);
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+.dl-dropdown__menu-list-button:hover {
+  background-color: var(--dl-color-menu-button-surface--hover);
+  color: var(--dl-color-menu-button-text--hover);
+}
+
+.dl-dropdown__menu-list-item.is-active button {
+  background-color: var(--dl-color-menu-button-surface--active);
+  color: var(--dl-color-menu-button-text--active);
+}
+
+.dl-icon-spinner {
+  transform-origin: center;
+  animation: dl_spinner 2s linear infinite;
+}
+.dl-icon-spinner circle {
+  stroke-linecap: round;
+  animation: dl_spinner_stroke 1.5s ease-in-out infinite;
+}
+@keyframes dl_spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dl_spinner_stroke {
+  0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+  }
+  47.5% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -16;
+  }
+  95%,
+  100% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -59;
+  }
+}
+
+.dl-transition-icon-enter-active,
+.dl-transition-icon-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.dl-transition-icon-enter-from {
+  opacity: 0;
+  transform: scale(1.25);
+}
+
+.dl-transition-icon-leave-to {
+  opacity: 0;
+  transform: scale(0.75);
+}
