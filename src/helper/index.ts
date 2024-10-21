@@ -63,7 +63,7 @@ export function sanitizeLanguageCode(sourceLanguage: deepl.LanguageCode | null):
 }
 
 export function useLogger() {
-  const prefix = '[Nuxt Deepl]'
+  const prefix = '[Nuxt DeepL]'
   const config = useRuntimeConfig()
   if (!config.public.deepl.debug) {
     return {

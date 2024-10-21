@@ -14,8 +14,8 @@ import { type ModuleOptions } from './types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'deepl-module',
-    configKey: 'deeplModule',
+    name: 'nuxt-deepl-module',
+    configKey: 'deepl',
   },
   // Default configuration options of the Nuxt module
   defaults: {
@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
     defaultLanguage: 'de',
     useCache: true,
     useCookie: true,
-    debug: true,
+    debug: false,
   },
   setup(options, nuxt) {
     const logger = useLogger('deepl-module')
