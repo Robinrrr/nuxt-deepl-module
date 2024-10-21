@@ -29,6 +29,8 @@
         <slot
           name="button"
           :is-open="isOpen"
+          :current-language="currentLanguage"
+          :is-translating="isTranslating"
         >
           <span class="dl-dropdown__button-icon-wrapper">
 
@@ -146,11 +148,6 @@ const props = defineProps({
       return value.every(lang => languageCodes.includes(lang.code))
     },
     default: () => languages,
-    required: false,
-  },
-  useStyles: {
-    type: Boolean,
-    default: true,
     required: false,
   },
 })
