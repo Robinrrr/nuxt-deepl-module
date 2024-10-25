@@ -7,9 +7,7 @@
 [![License][license-src]][license-href]https://npmjs.com/package/nuxt-deepl-module
 [![Nuxt][nuxt-src]][nuxt-href]https://nuxt.com
 
-### Overview
-
-The Nuxt Deepl Module offers a solution for transforming single-language Nuxt.js websites into multi-language sites without the complexities of manual translation. By using the DeepL API, this module automates the translation process, ensuring a seamless user experience across various languages.
+> The unofficial Nuxt DeepL Module offers a solution for transforming single-language Nuxt.js websites into multi-language sites without the complexities of manual translation. By using the DeepL API, this module automates the translation process, ensuring a seamless user experience across various languages.
 
 
 ### Features
@@ -24,7 +22,7 @@ The Nuxt Deepl Module offers a solution for transforming single-language Nuxt.js
 ### Requirements
 
 - Nuxt.js 3.x or later
-- A DeepL API account (Please note: The Free Plan has a maximum limit of 1,500 characters)
+- A DeepL API account (please note: The Free Plan has a maximum limit of 1,500 characters)
 
 
 ### Installation and Setup
@@ -104,7 +102,10 @@ You can override the default styles with the template:
       Hello I am an information text
     </div>
 
-    <!-- This button will be translated. However, reactive changes will not be taken into account. -->
+    <!-- 
+     This button will be translated. However, 
+     reactive changes will not be taken into account. 
+     -->
     <button v-deepl:watch="false">
       {{ isOpen ? 'Close menu' : 'Open menu' }}
     </button>
