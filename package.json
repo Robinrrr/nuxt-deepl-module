@@ -12,6 +12,13 @@
       "require": "./dist/module.cjs"
     }
   },
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "deepl",
+    "translation",
+    "i18n"
+  ],
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "files": [
