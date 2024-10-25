@@ -19,7 +19,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    apiKey: undefined,
+    apiKey: null,
     apiUrl: {
       pro: 'https://api.deepl.com/v2',
       free: 'https://api-free.deepl.com/v2',

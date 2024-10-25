@@ -5,7 +5,7 @@ export type GlossaryPair = { uuid: string, source: SourceLanguageCode, target: T
 export type LanguageArray = Array<{ code: TargetLanguageCode, name: string }>
 
 export interface ModuleOptions {
-  apiKey: string | undefined
+  apiKey: string | null
   apiUrl: {
     free: string
     pro: string

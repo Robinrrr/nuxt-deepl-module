@@ -41,7 +41,7 @@ The Nuxt Deepl Module offers a solution for transforming single-language Nuxt.js
     export default {
       modules: ["nuxt-deepl-module"],
       deepl: {
-        apiKey: undefined, // Pro or Free API Key
+        apiKey: null, // Pro or Free API Key
         apiType: "free",
         apiUrl: {
           pro: "https://api.deepl.com/v2",
