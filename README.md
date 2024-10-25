@@ -2,10 +2,10 @@
 
 # Nuxt DeepL Module
 
-[![npm version][npm-version-src]][npm-version-href]https://npmjs.com/package/nuxt-deepl-module
-[![npm downloads][npm-downloads-src]][npm-downloads-href]https://npmjs.com/package/nuxt-deepl-module
-[![License][license-src]][license-href]https://npmjs.com/package/nuxt-deepl-module
-[![Nuxt][nuxt-src]][nuxt-href]https://nuxt.com
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+[![Nuxt][nuxt-src]][nuxt-href]
 
 > The unofficial Nuxt DeepL Module offers a solution for transforming single-language Nuxt.js websites into multi-language sites without the complexities of manual translation. By using the DeepL API, this module automates the translation process, ensuring a seamless user experience across various languages.
 
