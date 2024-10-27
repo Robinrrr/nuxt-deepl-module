@@ -21,7 +21,7 @@ jobs:
         run: npx nuxi prepare # or `npx nuxt build` if using Nuxt 2
 
       - name: Run TypeScript Build
-        run: npm run build
+        run: npm run dev:build
 
       - name: Publish to npm
         run: npm publish
