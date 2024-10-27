@@ -14,7 +14,16 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
           scope: '@octocat'
-      - run: yarn
-      - run: yarn prepack && yarn publish
+      - name: Install dependencies
+        run: npm install
+
+      - name: Prepare Nuxt (Generate `.nuxt` folder)
+        run: npx nuxi prepare # or `npx nuxt build` if using Nuxt 2
+
+      - name: Run TypeScript Build
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
