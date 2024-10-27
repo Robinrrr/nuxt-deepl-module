@@ -15,15 +15,15 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@octocat'
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
       - name: Prepare Nuxt (Generate `.nuxt` folder)
-        run: npx nuxi prepare # or `npx nuxt build` if using Nuxt 2
+        run: yarn dev:prepare # or `npx nuxt build` if using Nuxt 2
 
       - name: Run TypeScript Build
-        run: npm run dev:build
+        run: yarn dev:build
 
       - name: Publish to npm
-        run: npm publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
