@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/Robinrrr/nuxt-deepl-module/compare/v1.0.6...v1.0.7) (2024-10-27)
+
+
+### Miscellaneous Chores
+
+* release 1.0.7 ([a442fc4](https://github.com/Robinrrr/nuxt-deepl-module/commit/a442fc4a439fc7a3bb32c0231ae4c40bd9823454))
+
 ## [1.0.6](https://github.com/Robinrrr/nuxt-deepl-module/compare/v1.0.5...v1.0.6) (2024-10-27)
 
 

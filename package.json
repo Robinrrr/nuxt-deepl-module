@@ -1,6 +1,6 @@
 {
   "name": "nuxt-deepl-module",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Automatically translate single-language Nuxt.js websites into multiple languages using the DeepL API (unofficial)",
   "repository": "Robinrrr/nuxt-deepl-module",
   "license": "MIT",
